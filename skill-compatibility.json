@@ -1,0 +1,64 @@
+{
+  "$schema": "https://example.invalid/pi-skill-compatibility.schema.json",
+  "schemaVersion": 1,
+  "repository": "badlogic/pi-skills",
+  "generatedBy": "pi extension audit patch plan",
+  "skills": {
+    "brave-search": {
+      "runtime": ["node"],
+      "network": true,
+      "auth": ["BRAVE_API_KEY"],
+      "installRequired": "npm install in skill directory",
+      "risk": ["network", "api-key", "deprecated-baseDir-placeholder"]
+    },
+    "browser-tools": {
+      "runtime": ["node", "chrome"],
+      "network": true,
+      "auth": ["optional browser profile/cookies"],
+      "installRequired": "npm install in skill directory",
+      "risk": ["browser-automation", "authenticated-profile", "deprecated-baseDir-placeholder"]
+    },
+    "gccli": {
+      "runtime": ["node", "gccli"],
+      "network": true,
+      "auth": ["Google OAuth"],
+      "installRequired": "npm install -g @mariozechner/gccli",
+      "risk": ["calendar-read-write", "oauth"]
+    },
+    "gdcli": {
+      "runtime": ["node", "gdcli"],
+      "network": true,
+      "auth": ["Google OAuth"],
+      "installRequired": "npm install -g @mariozechner/gdcli",
+      "risk": ["drive-read-write", "upload-download-share", "oauth"]
+    },
+    "gmcli": {
+      "runtime": ["node", "gmcli"],
+      "network": true,
+      "auth": ["Google OAuth"],
+      "installRequired": "npm install -g @mariozechner/gmcli",
+      "risk": ["email-read-write", "send-email", "oauth"]
+    },
+    "transcribe": {
+      "runtime": ["curl"],
+      "network": true,
+      "auth": ["GROQ_API_KEY"],
+      "installRequired": null,
+      "risk": ["api-key", "uploads-audio", "deprecated-baseDir-placeholder"]
+    },
+    "vscode": {
+      "runtime": ["code"],
+      "network": false,
+      "auth": [],
+      "installRequired": "VS Code code CLI in PATH",
+      "risk": ["opens-local-editor"]
+    },
+    "youtube-transcript": {
+      "runtime": ["node"],
+      "network": true,
+      "auth": [],
+      "installRequired": "npm install in skill directory",
+      "risk": ["network", "deprecated-baseDir-placeholder"]
+    }
+  }
+}
